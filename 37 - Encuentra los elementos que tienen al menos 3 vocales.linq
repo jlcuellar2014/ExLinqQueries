@@ -16,7 +16,7 @@ PrintLista(resultado);
 resultado = nombres.Where(n => n.Count(v => vocales.Contains(v, StringComparison.OrdinalIgnoreCase)) >= 3);
 PrintLista(resultado);
 
-// método auxiliar para imprimir los resultados
+// Método auxiliar para imprimir los resultados
 void PrintLista(IEnumerable lista)
 {
 	Console.WriteLine("------------------------");
