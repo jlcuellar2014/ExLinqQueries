@@ -47,19 +47,6 @@ var estudiantesMejorNota = from e in estudiantes
 PrintLista(estudiantesMejorNota);
 
 // Sintaxis método
-/*
-	var resultadoJoin = secuencia1
-    .Join(
-        secuencia2,
-        claveSecuencia1 => claveSecuencia1.PropiedadEnSecuencia1,
-        claveSecuencia2 => claveSecuencia2.PropiedadEnSecuencia2,
-        (elementoSecuencia1, elementoSecuencia2) => new
-        {
-            PropiedadResultado1 = elementoSecuencia1.PropiedadEnSecuencia1,
-            PropiedadResultado2 = elementoSecuencia2.PropiedadEnSecuencia2
-        });
-		
-*/
 estudiantesMejorNota = estudiantes.Join(
 								   notas,
 								   ke => ke.IdEstudiante, // key estudiantes

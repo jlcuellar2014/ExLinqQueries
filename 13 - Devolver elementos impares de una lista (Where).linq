@@ -15,7 +15,7 @@ PrintLista(impares);
 
 // Para obtener los pares solo necesitamos modificar la condición a n % 2 == 0
 
-// método auxiliar para imprimir los resultados
+// Método auxiliar para imprimir los resultados
 void PrintLista(IEnumerable lista)
 {
 	Console.WriteLine("------------------------");

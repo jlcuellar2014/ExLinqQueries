@@ -7,7 +7,7 @@ IEnumerable<int> resultado;
 
 // Expresiones de Consulta (Sintaxis de Consulta)
 resultado = from e in lista where e > 50
-		   select e;
+		   	select e;
 		   
 // No se puede guardar en un objeto List, pq este tipo de 
 // consulta devuelve un IEnumerable (daría un error de cast)
@@ -18,7 +18,7 @@ resultado = lista.Where(e => e > 50);
 PrintLista(resultado);
 
 
-// método auxiliar para imprimir los resultados
+// Método auxiliar para imprimir los resultados
 void PrintLista(IEnumerable lista)
 {
 	Console.WriteLine("------------------------");

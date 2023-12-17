@@ -1,14 +1,20 @@
 <Query Kind="Statements" />
 
-// Devuelve los elementos que están en la posición par de una lista
+// Encuentra todos los nombres que comienzan con la letra "A"
 
 string[] nombres = { "Juan", "María", "Carlos", "Ana", "Pedro", "Laura", "Andrés", "Isabel", "Martín", "Elena", "Ricardo", "Sofía", "Luis", "Julia", "Miguel", "Valeria", "Fernando", "Camila", "Diego", "Daniela" };
 
-// Sintaxis método
-var resultado = nombres.Where((nombre, indice)=> indice % 2 == 0);
+// Sintaxis de consulta
+IEnumerable comienzanA = from n in nombres
+							where n.StartsWith("A", StringComparison.OrdinalIgnoreCase)
+								select n;
+PrintLista(comienzanA);							
 
-PrintLista(resultado);
-									
+
+// Sintaxis de método
+comienzanA = nombres.Where(n => n.StartsWith("A", StringComparison.OrdinalIgnoreCase));
+PrintLista(comienzanA);
+
 // Método auxiliar para imprimir los resultados
 void PrintLista(IEnumerable lista)
 {
@@ -17,3 +23,4 @@ void PrintLista(IEnumerable lista)
 		Console.WriteLine(v);
 	}
 }
+								

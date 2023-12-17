@@ -57,8 +57,7 @@ listaOrdenada = personas
 PrintLista(listaOrdenada);
 
 
-
-// método auxiliar para imprimir los resultados
+// Método auxiliar para imprimir los resultados
 void PrintLista(IEnumerable lista)
 {
 	Console.WriteLine("------------------------");
